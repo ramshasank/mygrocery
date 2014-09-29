@@ -1,0 +1,1628 @@
+The web page is designed using the bootstrap template http://getbootstrap.com/getting-started/
+The login page and the registration page is designed using the asp.net tutorials in youtube https://www.youtube.com/watch?v=KVlXccl-XBA
+
+The images are gathered from google images https://www.google.com/imghp?hl=en&tab=wi&ei=geIoVMPpIYb4yQT9poCgDA&ved=0CAQQqi4oAg
+
+The recipes are gathered from all recipe website “http://www.allrecipes.com”
+Home page code:-
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="homepage.aspx.cs" Inherits="homepage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Online grocery shopping</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+          </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+           <p><a class="btn btn-default" href="login.aspx" role="button">Log in »</a></p> 
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Grocery store</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Recepies</h2>
+           <img src="images/recepies.jpg" alt"" height="160" width="250"/>       
+          <p><a class="btn btn-default" href="login.aspx" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Vegetables</h2>
+          <img src="images/vegetables.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="login.aspx" role="button">View details »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Fruits</h2>
+          <img src="images/fruits.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="login.aspx" role="button">View details »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Pharmacy</h2>
+          <img src="images/pharmacy.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="login.aspx" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>House hold</h2>
+          <img src="images/household.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="login.aspx" role="button">View details »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Meat</h2>
+          <img src="images/meat.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="login.aspx" role="button">View details »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+Login page code:
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login"%>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 216px;
+            text-align: right;
+        }
+        .style3
+        {
+            width: 174px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="font-family: 'Century Schoolbook'; font-size: xx-large; font-weight: 700; text-align: center; color: #333399">
+    
+        Login Page</div>
+    <table class="style1">
+        <tr>
+            <td class="style2">
+                UserName</td>
+            <td class="style3" width="200px">
+                <asp:TextBox ID="TextBoxUN" runat="server" Width="200px"></asp:TextBox>
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                    ControlToValidate="TextBoxUN" ErrorMessage="Enter Username" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                Password</td>
+            <td class="style3" width="200px">
+                <asp:TextBox ID="TextBoxPswd" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                    ControlToValidate="TextBoxPswd" ErrorMessage="Enter password" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+            <td class="style3" width="200px">
+                <asp:Button ID="ButtonLogin" runat="server" Height="24px" 
+                    onclick="ButtonLogin_Click" Text="Login" Width="70px" />
+            </td>
+            <td>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/registration.aspx">New User Register Here</asp:HyperLink>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+            <td class="style3" width="200px">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+
+Registration page code:
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="registration.aspx.cs" Inherits="registration" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 281px;
+            text-align: right;
+        }
+        .style3
+        {
+            width: 281px;
+            height: 23px;
+            text-align: right;
+        }
+        .style4
+        {
+            height: 23px;
+        }
+        .style5
+        {
+            width: 199px;
+        }
+        .style6
+        {
+            height: 23px;
+            width: 199px;
+        }
+        .style7
+        {
+            text-align: left;
+        }
+        #Reset1
+        {
+            width: 64px;
+        }
+    </style>
+</head>
+<body bgcolor="#ffff66">
+<h1>Registration Form</h1>
+    <form id="form1" runat="server">
+    <table class="style1">
+        <tr>
+            <td class="style2">
+                User Name:</td>
+            <td class="style5">
+               <asp:TextBox ID="TextBoxUN" runat="server" Width="200px"></asp:TextBox>
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                    ControlToValidate="TextBoxUN" ErrorMessage="User Name is required." 
+                    ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="style3">
+                E-mail:</td>
+            <td class="style6">
+                <asp:TextBox ID="TextBoxEmail" runat="server" Width="200px"></asp:TextBox>
+            </td>
+            <td class="style4">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                    ControlToValidate="TextBoxEmail" ErrorMessage="Email is required." 
+                    ForeColor="Red"></asp:RequiredFieldValidator>
+                <br />
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                    ControlToValidate="TextBoxEmail" ErrorMessage="You must enter the valid Email." 
+                    ForeColor="Red" 
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                Password:</td>
+            <td class="style5">
+                <asp:TextBox ID="TextBoxPswd" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
+            </td>
+            <td class="style7">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                    ControlToValidate="TextBoxPswd" ErrorMessage="Password is required." 
+                    ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                Confirm Password:</td>
+            <td class="style5">
+                <asp:TextBox ID="TextBox4CPswd" runat="server" TextMode="Password" 
+                    Width="200px"></asp:TextBox>
+            </td>
+            <td class="style7">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                    ControlToValidate="TextBox4CPswd" ErrorMessage="Confirm Password id required." 
+                    ForeColor="Red"></asp:RequiredFieldValidator>
+                <br />
+                <asp:CompareValidator ID="CompareValidator1" runat="server" 
+                    ControlToCompare="TextBoxPswd" ControlToValidate="TextBox4CPswd" 
+                    ErrorMessage="Both password must be same." ForeColor="Red"></asp:CompareValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                Contact Number:</td>
+            <td class="style5">
+                <asp:TextBox ID="TextBoxCNo" runat="server" Width="200px"></asp:TextBox>
+            </td>
+            <td class="style7">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
+                    ControlToValidate="TextBoxCNo" ErrorMessage="Contact Number is required." 
+                    ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                Gender:</td>
+            <td class="style5">
+                <asp:DropDownList ID="DropDownListGender" runat="server" Width="120px">
+                    <asp:ListItem>Male</asp:ListItem>
+                    <asp:ListItem>Female</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+    <div>
+    
+        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+            style="margin-left: 292px" Text="Register" Width="61px" />
+        <input id="Reset1" type="reset" value="reset" /></div>
+    </form>
+</body>
+</html>
+
+
+
+Main page:
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="bootstrap.aspx.cs" Inherits="bootstrap" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Online grocery shopping</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet"/>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Grocery store</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Recepies</h2>
+           <img src="images/recepies.jpg" alt"" height="160" width="250"/>       
+          <p><a class="btn btn-default" href="recepies.aspx" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Vegetables</h2>
+          <img src="images/vegetables.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="vegetables.aspx" role="button">View details »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Fruits</h2>
+          <img src="images/fruits.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="fruits.aspx" role="button">View details »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Pharmacy</h2>
+          <img src="images/pharmacy.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="pharmacy.aspx" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>House hold</h2>
+          <img src="images/household.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="household.aspx" role="button">View details »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Meat</h2>
+          <img src="images/meat.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="meat.aspx" role="button">View details »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+Recepies page code:
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="recepies.aspx.cs" Inherits="recepies" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Recepies</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+            
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Recepies</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Chinese</h2>
+           <img src="images/chinese.jpg" alt"" height="160" width="250"/>          
+          <p><a class="btn btn-default" href="chinese.aspx" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Italian</h2>
+          <img src="images/italian.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="italian.aspx" role="button">View details »</a></p>
+       </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Mexican</h2>
+          <img src="images/mexican.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="mexican.aspx" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Indian</h2>
+          <img src="images/indian.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="indian.aspx" role="button">View details »</a></p>
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+
+Chinese page code:
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="chinese.aspx.cs" Inherits="Default2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>Chinese</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+           
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Chinese</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Chinese chicken noodle</h2>
+           <img src="images/chickennoodle.jpg" alt"" height="160" width="250"/>         
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/chinese-food.html" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Kung pao chicken</h2>
+          <img src="images/kungpao.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/kung-pao-chicken.html" role="button">View details »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Shrimp fried rice</h2>
+          <img src="images/shrimpfriedrice.jpeg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/shrimp-friedrice.html" role="button">View details »</a></p>
+        </div>
+      </div>
+	  
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+
+Italian page code:
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="italian.aspx.cs" Inherits="Default2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Italian</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Italian</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Grilled cheese sandwich</h2>
+           <img src="images/cheesesandwich.jpg" alt"" height="160" width="250"/>         
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/cheese-sandwich.html" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Old Italian meat sauce</h2>
+          <img src="images/meatsauce.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/meat-sauce.html" role="button">View details »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Pasta Primavera</h2>
+          <img src="images/pastaprimavera.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/pasta-primavera.html" role="button">View details »</a></p>
+        </div>
+      </div>
+	  
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+
+Mexican page code:
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="mexican.aspx.cs" Inherits="mexican" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Mexican</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Mexican</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Mexican layered dip</h2>
+           <img src="images/layereddip.jpg" alt"" height="160" width="250"/>         
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/layered-dip.html" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Mexican Pesto</h2>
+          <img src="images/pesto.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/mexican-pesto.html" role="button">View details »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Mexican quinoa</h2>
+          <img src="images/quinoa.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/mexican-quinoa.html" role="button">View details »</a></p>
+        </div>
+      </div>
+	  
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+Indian page code:
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="indian.aspx.cs" Inherits="indian" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Indian</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Indian</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Palak Paneer</h2>
+           <img src="images/palak.jpg" alt"" height="160" width="250"/>          
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/palak-paneer.html" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Prawn Biriyani</h2>
+          <img src="images/prawn.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/prawn-biriyani.html" role="button">View details »</a></p>
+       </div>
+	   <div class="col-md-4">
+          <h2>Butter Chicken</h2>
+          <img src="images/butterchicken.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="https://dl.dropboxusercontent.com/u/60004998/grocery%20store/butter-chicken.html" role="button">View details »</a></p>
+       </div>
+      </div>
+	  
+	  
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+
+Vegetables page code:
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="vegetables.aspx.cs" Inherits="vegetables" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Vegetables</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+          </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Vegetables</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Broccoli</h2>
+           <img src="images/broccoli.jpg" alt"" height="160" width="250"/>       
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Cabbage</h2>
+          <img src="images/cabbage.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Capsicum</h2>
+          <img src="images/capsicum.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Carrot</h2>
+          <img src="images/carrot.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to carts »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Cauliflower</h2>
+          <img src="images/cauliflower.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Cucumber</h2>
+          <img src="images/cucumber.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Green peas</h2>
+          <img src="images/green peas.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Onions</h2>
+          <img src="images/onions.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Potatoes</h2>
+          <img src="images/potatoes.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">View details »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+
+Fruits page code:
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="fruits.aspx.cs" Inherits="fruits" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>Fruits</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+          </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Fruits</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Apples</h2>
+           <img src="images/apples.jpg" alt"" height="160" width="250"/>       
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Bannana</h2>
+          <img src="images/banana.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Grapes</h2>
+          <img src="images/grapes.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Kiwi</h2>
+          <img src="images/kiwi.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Oranges</h2>
+          <img src="images/oranges.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Papaya</h2>
+          <img src="images/papaya.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart»</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Strawberry</h2>
+          <img src="images/strawberry.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Pineapple</h2>
+          <img src="images/pineapple.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Pomegranate</h2>
+          <img src="images/pomegranate.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">VAdd to cart »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+
+House hold page code:
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="household.aspx.cs" Inherits="household" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>House hold</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+          </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Household</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Instant milk bucket</h2>
+           <img src="images/165 Total Servings of EasyPrep Milky Way Instant Milk Bucket_64.99.jpg" alt"" height="160" width="250"/>       
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>White flour</h2>
+          <img src="images/465 Total Servings of White Flour 36 lbs, Emergency Food Storage Bucket with Gamma Seal Lid, Product of USA_47.99.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Organic Turkey red beans</h2>
+          <img src="images/Earth's Best USDA Organic Turkey Red Beans and Rice Puree Two 12-pack_37.99.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Short cakekmix</h2>
+          <img src="images/Fisher® Original Fair Scone & Shortcake Mix 2-pk_24.99.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Coconut flour</h2>
+          <img src="images/Honeyville USDA Organic Coconut Flour 5 lb. Bag 2-pack_34.99.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Liquid creamer</h2>
+          <img src="images/International Delight French Vanilla Liquid Creamer Portion Cups 192ct_10.99.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Reggiano</h2>
+          <img src="images/Kirkland Signature™ Aged 24 Months Whole Wheel Parmigiano Reggiano_899.97.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Organic ancient grains</h2>
+          <img src="images/Kirkland Signature™ Nature’s Path USDA Organic Ancient Grains Granola 35.2 oz. Box, 3-pack_32.99.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to carts »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Liquid creamer </h2>
+          <img src="images/Nestlé® Coffee-mate® Peppermint Mocha Liquid Creamer 1.5L Pump Bottle_16.99.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+
+Pharmacy page code:
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="pharmacy.aspx.cs" Inherits="pharmacy" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <title>Pharmacy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+          </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Pharmacy</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Exfoilating scrub</h2>
+           <img src="images/Advanced Acne Therapy Gentle Exfoliating Scrub_11.jpg" alt"" height="160" width="250"/>       
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>B.P Monitor</h2>
+          <img src="images/Advanced Wrist Blood Pressure Monitor_69.99.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Child fever suppositories</h2>
+          <img src="images/Children's Fever Reducing Suppositories_10.49$.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Eye patch</h2>
+          <img src="images/concave eye patch_4.98$.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Digestive capsules</h2>
+          <img src="images/Digestive Probiotic Capsules_19.99.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Moist wipes</h2>
+          <img src="images/Flushable Moist Wipes_1.19.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Tampoons</h2>
+          <img src="images/Plastic Tampons Regular Absorbency Unscented_6.99$.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Rubber grip</h2>
+          <img src="images/Rubber Grip Pivot Disposable Razors_7.42$.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Sunscreen</h2>
+          <img src="images/Zinc Sunscreen, Broad Spectrum SPF 30_9.99$.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
+
+
+Meat page code:
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="meat.aspx.cs" Inherits="Default2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>Meat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"></a>
+          </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            
+            <p><a class="btn btn-default" href="homepage.aspx" role="button">Log out</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Meat</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Bacon</h2>
+           <img src="images/bacon.jpg" alt"" height="160" width="250"/>       
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Chicken</h2>
+          <img src="images/chicken.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Crabs</h2>
+          <img src="images/crabs.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Halibutt</h2>
+          <img src="images/halibut.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Ham</h2>
+          <img src="images/ham.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Lamb</h2>
+          <img src="images/lamb.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+	  
+	  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Pork</h2>
+          <img src="images/pork.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Salmon</h2>
+          <img src="images/salmon.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Shrimps</h2>
+          <img src="images/shrimps.jpg" alt"" height="160" width="250"/>
+          <p><a class="btn btn-default" href="http://getbootstrap.com/examples/jumbotron/#" role="button">Add to cart »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Jumbotron Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html> 
+
+
+
